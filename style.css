@@ -2,6 +2,7 @@
 body{
     margin: 0;
     background-color: #000000;
+    font-family: 'Roboto', sans-serif;
 }
 body::-webkit-scrollbar{
     display: none;
@@ -21,7 +22,7 @@ body::-webkit-scrollbar{
 
 #title{
     font-size: 3em;
-    font-weight: 600;
+    font-weight: 800;
     margin-top: 20px;
 }
 

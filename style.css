@@ -12,6 +12,7 @@ body::-webkit-scrollbar{
 /* Individual styles */
 #someRight{
     padding: 50px;
+    padding-left: 20px;
     color: #ffffff;
 
 }
@@ -68,6 +69,7 @@ body::-webkit-scrollbar{
         margin: 50px 20px auto auto;
     }
     #someRight{
+        padding-left: 50px;
         float: left;
     }
 }

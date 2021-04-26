@@ -13,7 +13,12 @@ body::-webkit-scrollbar{
 #someRight{
     padding: 30px 0 25px 25px;
     color: #ffffffde;
+    display: inline-block;
+}
 
+.setPosition{
+    position: relative;
+    top: -100px;
 }
 
 
@@ -41,6 +46,7 @@ body::-webkit-scrollbar{
     border: 2px solid rgb(0,191,255);
     font-size: 1.1em;
     font-weight: bold;
+    outline: none;
 }
 #signup{
     background-color: rgb(0,191,255);
@@ -60,8 +66,9 @@ body::-webkit-scrollbar{
     background-color: #ffffff1c;
 }
 #twitterPhoto{
-    width: 100%;
-    max-width: 768px;
+    width: 700px;
+    margin: 40px 0 auto 50px;
+    /* text-align: end; */
 }
 
 /* Login Page Styles (native) */
@@ -120,16 +127,27 @@ body::-webkit-scrollbar{
     padding-right: 10px;
     box-sizing: border-box;
 }
-
-@media(min-width: 768px){
+@media(max-width: 1000px){
     #twitterPhoto{
-        float: right;
-        width: 680px;
-        margin: 50px 20px auto auto;
+        margin: 0;
+    }
+    .setPosition{
+        top: 0;
+    }
+}
+
+@media(max-width: 768px){
+    #twitterPhoto{
+        width: 100%;
+        margin: 0;
+        /* margin: 50px 20px auto auto; */
     }
     #someRight{
         padding-left: 50px;
         float: left;
+    }
+    .setPosition{
+        top: 0;
     }
 }
 

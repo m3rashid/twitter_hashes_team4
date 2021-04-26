@@ -11,7 +11,7 @@ body::-webkit-scrollbar{
 
 /* Index Page Styles (Maybe Global) */
 #someRight{
-    padding: 30px 0 25px 25px;
+    padding: 30px 0 25px 60px;
     color: #ffffffde;
     display: inline-block;
 }
@@ -71,12 +71,13 @@ body::-webkit-scrollbar{
     /* text-align: end; */
 }
 
-/* Login Page Styles (native) */
+
+/* Login/Signup Page Styles (native) */
 #firstDiv, #secondDiv{
     height: 52px;
     width: 350px;
     border: 2px solid #ffffff80;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     border-radius: 8px;
 }
 #firstDiv p, #secondDiv p{
@@ -100,7 +101,10 @@ body::-webkit-scrollbar{
     margin-bottom: 5px;
     color: #ffffffde;
 }
-
+#firstDiv input::-webkit-outer-spin-button,
+#firstDiv input::-webkit-inner-spin-button{
+    display: none;
+}
 #instead{
     text-decoration: none;
     color: rgba(0, 191, 255, 0.8);
@@ -112,6 +116,7 @@ body::-webkit-scrollbar{
 
 #emailInstead:hover{
     color:rgb(0, 162, 255);
+    cursor: pointer;
 }
 
 #additional{
@@ -126,10 +131,22 @@ body::-webkit-scrollbar{
     padding-left: 10px;
     padding-right: 10px;
     box-sizing: border-box;
+    outline: none;
+    background-color: #000000;
+    border: 1px solid #ffffffde;
+    color: #ffffff;
 }
+
+/* #someRight input[type="date"]::-webkit-scrollbar-corner{
+    color:#ffffff;
+} */
+
 @media(max-width: 1000px){
     #twitterPhoto{
         margin: 0;
+    }
+    #someRight{
+        padding-left: 35px;
     }
     .setPosition{
         top: 0;
@@ -143,7 +160,7 @@ body::-webkit-scrollbar{
         /* margin: 50px 20px auto auto; */
     }
     #someRight{
-        padding-left: 50px;
+        padding-left: 25px;
         float: left;
     }
     .setPosition{

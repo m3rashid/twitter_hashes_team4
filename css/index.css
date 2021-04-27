@@ -1,7 +1,17 @@
+/*  Defining root variables */
+:root{
+    --twitter-blue: rgba(0, 191, 255, 0.8);
+    --twitter-bright-blue: rgb(0,191,255);
+    --light-border: #ffffff80;
+    --headings: #ffffffde;
+}
+
+
+
 /* full body styles */
 body{
     margin: 0;
-    background-color: #000000;
+    background-color: black;
     font-family: 'Roboto', sans-serif;
 }
 body::-webkit-scrollbar{
@@ -12,7 +22,7 @@ body::-webkit-scrollbar{
 /* Index Page Styles (Maybe Global) */
 #someRight{
     padding: 30px 0 25px 60px;
-    color: #ffffffde;
+    color: var(--headings);
     display: inline-block;
 }
 
@@ -43,32 +53,31 @@ body::-webkit-scrollbar{
     margin-bottom: 8px;
     width: 350px;
     border-radius: 100px;
-    border: 2px solid rgb(0,191,255);
+    border: 2px solid var(--twitter-bright-blue);
     font-size: 1.1em;
     font-weight: bold;
     outline: none;
 }
 #signup{
-    background-color: rgb(0,191,255);
-    color: #ffffff;
+    background-color: var(--twitter-bright-blue);
+    color: white;
     margin-top: 20px;
 }
 
 #signup:hover{
-    background-color: rgba(0, 191, 255, 0.8);
+    background-color: var(--twitter-blue);
 }
 
 #login{
-    background-color: #000000;
-    color: rgb(0,191,255);
+    background-color: black;
+    color: var(--twitter-bright-blue);
 }
 #login:hover{
-    background-color: #ffffff1c;
+    background-color: var(--light-border);
 }
 #twitterPhoto{
     width: 700px;
     margin: 40px 0 auto 50px;
-    /* text-align: end; */
 }
 
 
@@ -76,7 +85,7 @@ body::-webkit-scrollbar{
 #firstDiv, #secondDiv{
     height: 52px;
     width: 350px;
-    border: 2px solid #ffffff80;
+    border: 2px solid var(--light-border);
     margin-bottom: 10px;
     border-radius: 8px;
 }
@@ -85,21 +94,21 @@ body::-webkit-scrollbar{
     font-weight: 500;
     line-height: 1px;
     padding-left: 5px;
-    color: #000000;
+    color: black;
 }
 .blue{
-    color:rgb(0, 162, 255);
+    color: var(--twitter-bright-blue);
 }
 
 #firstDiv input, #secondDiv input{
     font-size: 1.2em;
     width: 94%;
     margin-left: 3px;
-    background-color: #000000;
+    background-color: black;
     border: none;
     outline: none;
     margin-bottom: 5px;
-    color: #ffffffde;
+    color: var(--light-border);
 }
 #firstDiv input::-webkit-outer-spin-button,
 #firstDiv input::-webkit-inner-spin-button{
@@ -107,15 +116,15 @@ body::-webkit-scrollbar{
 }
 #instead{
     text-decoration: none;
-    color: rgba(0, 191, 255, 0.8);
+    color: var(--twitter-blue);
     font-size: 0.8em;
 }
 #instead:hover{
-    color:rgb(0, 191, 255);
+    color: var(--twitter-bright-blue);
 }
 
 #emailInstead:hover{
-    color:rgb(0, 162, 255);
+    color: var(--twitter-bright-blue);
     cursor: pointer;
 }
 
@@ -132,9 +141,9 @@ body::-webkit-scrollbar{
     padding-right: 10px;
     box-sizing: border-box;
     outline: none;
-    background-color: #000000;
-    border: 1px solid #ffffffde;
-    color: #ffffff;
+    background-color: black;
+    border: 1px solid var(--light-border);
+    color: white;
 }
 
 /* #someRight input[type="date"]::-webkit-scrollbar-corner{
@@ -157,7 +166,6 @@ body::-webkit-scrollbar{
     #twitterPhoto{
         width: 100%;
         margin: 0;
-        /* margin: 50px 20px auto auto; */
     }
     #someRight{
         padding-left: 25px;

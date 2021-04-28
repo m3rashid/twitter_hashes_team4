@@ -37,3 +37,6 @@ email.addEventListener("click", ()=>{
     }  
 });
         
+document.getElementById("signup").addEventListener("click", ()=>{
+    window.location.href = "home.html";
+});

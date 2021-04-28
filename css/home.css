@@ -1,0 +1,255 @@
+:root{
+    --twitter-blue: rgba(0, 191, 255, 0.8);
+    --twitter-bright-blue: rgb(0,191,255);
+    --light-border: #ffffff80;
+    --headings: #ffffffde;
+    --dark-background: #000000d7;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--dark-background);
+    color: var(--headings);
+}
+body::-webkit-scrollbar,
+#left-pane::-webkit-scrollbar,
+#left-pane-hidden::-webkit-scrollbar,
+#right-pane::-webkit-scrollbar{
+    display: none;
+}
+
+/* Left Pane start */
+#left-pane-hidden{
+    display: none;
+}
+
+#left-pane,
+#left-pane-hidden{
+    height: 100vh;
+    padding: 10px;
+    width: 230px;
+    box-sizing: border-box;
+    box-shadow: 0 0 5px 0 white;
+    position: fixed;
+    overflow-y: scroll;
+    top: 0;
+    left: 0;
+}
+
+.tweet-btn, .plus-btn{
+    height: 40px;
+    border: none;
+    color: white;
+    background-color: var(--twitter-bright-blue);
+    font-size: 1.1em;
+}
+.tweet-btn{
+    width: 200px;
+    border-radius: 50px;
+}
+.plus-btn{
+    width: 40px;
+    border-radius: 50%;
+    font-size: 1.5em;
+    display: none;
+}
+/* Left Pane end */
+
+
+
+/* Center feed start */
+#center-feed{
+    margin-left: 230px;
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 550px;
+}
+#title{
+    font-size: 1.2em;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+#what-happen{
+    border: 1px solid var(--light-border);
+    padding: 10px;
+    border-radius: 20px;
+}
+#what-happen input[type="text"]{
+    height: 50px;
+    width: 75%;
+    margin: 0 10px 20px 10px;
+    box-sizing: border-box;
+    outline: none;
+    border-radius: 15px;
+    font-size: 1.2em;
+    padding-left: 20px;
+    border: none;
+    background-color: transparent;
+    color: var(--headings);
+}
+#add-media svg{
+    margin-right: 10px;
+}
+#send-tweet{
+    height: 30px;
+    width: 80px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    background-color: var(--twitter-blue);
+    margin-left: 230px;
+}
+.post{
+    border-top: 1px solid var(--light-border);
+    border-bottom: 1px solid var(--light-border);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+}
+.post .user-img{
+    margin-right: 20px;
+}
+.post-text{
+    margin-left: 70px;
+    width: 83%;
+}
+.username{
+    color: var(--light-border);
+    font-size: 0.9em;
+}
+/* Center feed end */
+
+
+/* Right pane start */
+#right-pane{
+    position: fixed;
+    overflow-y: scroll;
+    top: 0;
+    right: 0;
+    width: 350px;
+    height: 100vh;
+}
+/* Right pane end */
+
+
+/* Global */
+#messages{
+    position: fixed;
+    width: 350px;
+    box-sizing: border-box;
+    bottom: 0;
+    right: 0;
+    padding: 5px 20px 5px 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: 0 0 5px var(--light-border);
+    background-color: var(--dark-background);
+}
+#messages span{
+    margin-right: 130px;
+}
+hr{
+    background-color: var(--light-border);
+}
+.post svg{
+    margin-left: 55px;
+    margin-right: 55px;
+}
+.post label svg{
+    margin-left: 0;
+    margin-right: 10px;
+}
+
+
+/* Images start */
+#top-logo{
+    height: 40px;
+    margin-bottom: 30px;
+}
+
+.post-img{
+    width: 83%;
+    border-radius: 15px;
+    box-sizing: border-box;
+    margin-left: 70px;
+}
+
+#user-img-small{
+    height: 45px;
+    float: left;
+    border-radius: 50%;
+}
+
+.user-img{
+    height: 50px;
+    float: left;
+    border-radius: 50%;
+}
+.news-img{
+    height: 80px;
+    border-radius: 10px;
+    float: left;
+    margin-right: 5px;
+}
+/* Images end */
+
+label{
+    font-size: 1.1em;
+}
+
+
+@media(max-width:1000px){
+    #left-pane label,
+    #left-pane-hidden label{
+        display: none;
+    }
+
+    #left-pane,
+    #left-pane-hidden{
+        width: 70px;
+        box-shadow: 0 0 2px 0 white;
+    }
+    .tweet-btn{
+        display: none;
+    }
+    .plus-btn{
+        display: inline-block;
+    }
+    #left-pane-hidden hr{
+        visibility: hidden;
+    }
+    #center-feed{
+        margin-left: 70px;
+        width: 500px;
+    }
+    #right-pane, #messages{
+        width: 250px;
+    }
+    #messages span{
+        margin-right: 70px;
+    }
+    .post svg{
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+}
+
+@media(max-width: 800px){
+    #right-pane{
+        display: none;
+    }
+    #center-feed{
+        width: auto;
+    }
+    #send-tweet{
+        margin-left: 120px;
+    }
+    .post svg{
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+}

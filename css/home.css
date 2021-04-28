@@ -61,7 +61,7 @@ body::-webkit-scrollbar,
 
 /* Center feed start */
 #center-feed{
-    margin-left: 230px;
+    margin-left: 260px;
     margin-bottom: 20px;
     padding: 10px;
     width: 550px;
@@ -99,6 +99,8 @@ body::-webkit-scrollbar,
     border-radius: 20px;
     outline: none;
     background-color: var(--twitter-blue);
+    color: white;
+    font-weight: bold;
     float: right;
 }
 .post{
@@ -116,6 +118,7 @@ body::-webkit-scrollbar,
 .post-text{
     margin-left: 70px;
     width: 78%;
+    line-height: 1.5em;
 }
 .username{
     color: var(--light-border);
@@ -140,6 +143,30 @@ body::-webkit-scrollbar,
     right: 0;
     width: 350px;
     height: 100vh;
+    box-sizing: border-box;
+    padding-bottom: 50px;
+}
+
+#search-twitter{
+    height: 40px;
+    width: 80%;
+    margin-top: 20px;
+    border: 1px solid var(--light-border);
+    border-radius: 50px;
+    box-sizing: border-box;
+    padding-left: 20px;
+    font-size: 1.2em;
+    background-color: transparent;
+}
+#heading{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.news{
+    margin-top: 30px;
+}
+.trending{
+    font-size: 1.5em;
 }
 /* Right pane end */
 
@@ -196,7 +223,7 @@ label{
     height: 80px;
     border-radius: 10px;
     float: left;
-    margin-right: 5px;
+    margin-right: 10px;
 }
 /* Images end */
 

@@ -16,7 +16,8 @@ body{
 body::-webkit-scrollbar,
 #left-pane::-webkit-scrollbar,
 #left-pane-hidden::-webkit-scrollbar,
-#right-pane::-webkit-scrollbar{
+#right-pane::-webkit-scrollbar,
+#messages::-webkit-scrollbar{
     display: none;
 }
 
@@ -38,12 +39,26 @@ body::-webkit-scrollbar,
     left: 0;
 }
 
+.go-icon{
+    border: none;
+    height: 40px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 5px;
+}
+.go-icon:hover{
+    background-color: var(--dark-background);
+}
+
 .tweet-btn, .plus-btn{
     height: 40px;
     border: none;
     color: white;
     background-color: var(--twitter-bright-blue);
     font-size: 1.1em;
+}
+.tweet-btn:hover, .plus-btn:hover{
+    background-color: var(--twitter-blue);
 }
 .tweet-btn{
     width: 200px;
@@ -81,7 +96,6 @@ body::-webkit-scrollbar,
     width: 75%;
     margin: 0 10px 20px 10px;
     box-sizing: border-box;
-    outline: none;
     border-radius: 15px;
     font-size: 1.2em;
     padding-left: 20px;
@@ -97,7 +111,6 @@ body::-webkit-scrollbar,
     width: 80px;
     border: none;
     border-radius: 20px;
-    outline: none;
     background-color: var(--twitter-blue);
     color: white;
     font-weight: bold;
@@ -151,12 +164,13 @@ body::-webkit-scrollbar,
     height: 40px;
     width: 80%;
     margin-top: 20px;
-    border: 1px solid var(--light-border);
+    color: var(--light-border);
+    border: none;
     border-radius: 50px;
     box-sizing: border-box;
     padding-left: 20px;
     font-size: 1.2em;
-    background-color: transparent;
+    background-color: var(--dark-background);
 }
 #heading{
     font-size: 1.5em;
@@ -183,16 +197,30 @@ body::-webkit-scrollbar,
     border-top-right-radius: 10px;
     box-shadow: 0 0 5px var(--light-border);
     background-color: var(--dark-background);
+    overflow-y: scroll;
+    max-height: 80vh;
 }
-#messages span{
-    margin-right: 130px;
+.msg-content{
+    display: none;
 }
+
+#upChevron, #downChevron{
+    float: right;
+}
+
 hr{
     background-color: var(--light-border);
 }
 label{
     font-size: 1.1em;
 }
+svg:hover{
+    color: var(--twitter-bright-blue)
+}
+*{
+    outline: none;
+}
+/* global end */
 
 
 /* Images start */
@@ -214,6 +242,13 @@ label{
     border-radius: 50%;
 }
 
+.user-img-very-small{
+    height: 30px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 15px;
+}
+
 .user-img{
     height: 50px;
     float: left;
@@ -224,6 +259,9 @@ label{
     border-radius: 10px;
     float: left;
     margin-right: 10px;
+}
+#downChevron{
+    display: none;
 }
 /* Images end */
 
@@ -256,8 +294,10 @@ label{
     #right-pane, #messages{
         width: 250px;
     }
-    #messages span{
-        margin-right: 70px;
+    #messages > span{
+        display: inline-block;
+        margin-top: 5px;
+        font-size: 1.2em;
     }
     .post svg{
         margin-left: 50px;
